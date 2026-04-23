@@ -1,4 +1,4 @@
-import { Facebook, Globe, Instagram, MapPinned, MessageSquareMore, Phone, Send, Store, Telegram } from "lucide-react";
+import { Facebook, Globe, Instagram, MapPinned, MessageSquareMore, Phone, Send, Store, SendHorizontal } from "lucide-react";
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import PlatformShell from "@/components/layout/PlatformShell";
@@ -75,7 +75,7 @@ const EnterpriseProfile = () => {
                 <div className="info-row"><span>Тип деятельности</span><span className="font-medium text-foreground">{enterprise.mode}</span></div>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                {enterprise.socials.telegram && <span className="filter-chip"><Telegram className="mr-2 h-4 w-4" />{enterprise.socials.telegram}</span>}
+                {enterprise.socials.telegram && <span className="filter-chip"><SendHorizontal className="mr-2 h-4 w-4" />{enterprise.socials.telegram}</span>}
                 {enterprise.socials.instagram && <span className="filter-chip"><Instagram className="mr-2 h-4 w-4" />{enterprise.socials.instagram}</span>}
                 {enterprise.socials.facebook && <span className="filter-chip"><Facebook className="mr-2 h-4 w-4" />{enterprise.socials.facebook}</span>}
                 {enterprise.socials.linkedin && <span className="filter-chip"><Globe className="mr-2 h-4 w-4" />{enterprise.socials.linkedin}</span>}

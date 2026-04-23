@@ -1,3 +1,7 @@
+import blueforgeCover from "@/assets/enterprise-blueforge.jpg";
+import civicCover from "@/assets/enterprise-civic.jpg";
+import northlineCover from "@/assets/enterprise-northline.jpg";
+
 export type Enterprise = {
   id: string;
   slug: string;
@@ -28,7 +32,7 @@ export const enterprises: Enterprise[] = [
     slug: "blueforge-industries",
     name: "BlueForge Industries",
     logo: "BF",
-    cover: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+    cover: blueforgeCover,
     categories: ["Машиностроение", "B2B услуги", "Экспорт"],
     summary: "Производство промышленных узлов, сервисное сопровождение и запуск корпоративных коопераций.",
     activity: "BlueForge Industries сопровождает городские и частные производственные проекты: от подбора компонентов до сервисного обслуживания, аудита цепочки поставок и запуска совместных B2B-программ.",
@@ -70,7 +74,7 @@ export const enterprises: Enterprise[] = [
     slug: "civic-urban-labs",
     name: "Civic Urban Labs",
     logo: "CU",
-    cover: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    cover: civicCover,
     categories: ["Городские сервисы", "Консалтинг", "Digital"],
     summary: "Команда по запуску городских программ, цифровых сервисов и проектного офисного сопровождения бизнеса.",
     activity: "Civic Urban Labs объединяет бизнес и муниципальные команды вокруг программ сотрудничества, акселерации сервисов, обучения и digital-коммуникаций с жителями и партнёрами.",
@@ -108,7 +112,7 @@ export const enterprises: Enterprise[] = [
     slug: "northline-logistics",
     name: "Northline Logistics",
     logo: "NL",
-    cover: "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1200&q=80",
+    cover: northlineCover,
     categories: ["Логистика", "Складские решения", "E-commerce"],
     summary: "Фулфилмент, складские мощности и транспортная кооперация для производителей и сервисных компаний.",
     activity: "Northline Logistics помогает локальным предприятиям масштабировать поставки, запускать омниканальные продажи и объединять складскую инфраструктуру с партнёрами по платформе.",

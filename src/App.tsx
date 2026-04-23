@@ -3,8 +3,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import EnterprisesCatalog from "./pages/EnterprisesCatalog";
+import MarketplaceCatalog from "./pages/MarketplaceCatalog";
+import EnterpriseProfile from "./pages/EnterpriseProfile";
+import AnalyticsPage from "./pages/AnalyticsPage";
+import ChatPage from "./pages/ChatPage";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +21,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/enterprises" element={<EnterprisesCatalog />} />
+          <Route path="/marketplace" element={<MarketplaceCatalog />} />
+          <Route path="/enterprise/:slug" element={<EnterpriseProfile />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/chat" element={<ChatPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

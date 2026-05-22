@@ -9,15 +9,15 @@ const activeThread = chatThreads[0];
 const ChatPage = () => {
   return (
     <PlatformShell
-      title="Чат предприятий"
-      subtitle="Пространство для быстрых переговоров, согласования условий сотрудничества и обмена деталями по товарам, услугам и городским проектам."
+      title="Чат підприємств"
+      subtitle="Простір для швидких переговорів, узгодження умов співпраці та обміну деталями щодо товарів, послуг і міських проєктів."
     >
       <section className="section-band pt-2">
         <div className="site-container grid gap-6 xl:grid-cols-[320px_1fr]">
           <aside className="surface-panel p-5">
             <div className="relative">
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input className="pl-9" placeholder="Поиск диалогов" />
+              <Input className="pl-9" placeholder="Пошук діалогів" />
             </div>
             <div className="mt-5 space-y-3">
               {chatThreads.map((thread, index) => (
@@ -56,10 +56,10 @@ const ChatPage = () => {
 
             <div className="border-t border-line px-6 py-5">
               <div className="flex gap-3">
-                <Input placeholder="Написать сообщение партнёру" />
+                <Input placeholder="Написати повідомлення партнеру" />
                 <Button>
                   <Send className="h-4 w-4" />
-                  Отправить
+                  Надіслати
                 </Button>
               </div>
             </div>

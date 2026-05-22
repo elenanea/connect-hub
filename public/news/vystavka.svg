@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <circle cx="700" cy="60" r="140" fill="white" fill-opacity="0.07"/>
+  <circle cx="100" cy="380" r="100" fill="white" fill-opacity="0.05"/>
+  <!-- building / expo hall -->
+  <rect x="120" y="200" width="560" height="160" rx="8" fill="white" fill-opacity="0.12"/>
+  <!-- columns -->
+  <rect x="160" y="180" width="30" height="180" rx="4" fill="white" fill-opacity="0.2"/>
+  <rect x="240" y="180" width="30" height="180" rx="4" fill="white" fill-opacity="0.2"/>
+  <rect x="320" y="180" width="30" height="180" rx="4" fill="white" fill-opacity="0.2"/>
+  <rect x="400" y="180" width="30" height="180" rx="4" fill="white" fill-opacity="0.2"/>
+  <rect x="480" y="180" width="30" height="180" rx="4" fill="white" fill-opacity="0.2"/>
+  <rect x="560" y="180" width="30" height="180" rx="4" fill="white" fill-opacity="0.2"/>
+  <!-- roof -->
+  <polygon points="80,200 400,120 720,200" fill="white" fill-opacity="0.18"/>
+  <!-- banner -->
+  <rect x="260" y="230" width="280" height="60" rx="6" fill="white" fill-opacity="0.18"/>
+  <text x="400" y="268" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">EXPO СУМИ 2026</text>
+  <!-- text -->
+  <text x="400" y="70" font-family="system-ui, sans-serif" font-size="30" font-weight="700" fill="white" text-anchor="middle">Бізнес-виставка</text>
+  <text x="400" y="106" font-family="system-ui, sans-serif" font-size="22" fill="white" fill-opacity="0.85" text-anchor="middle">«Сумщина промислова»</text>
+  <rect x="280" y="120" width="240" height="3" rx="2" fill="white" fill-opacity="0.4"/>
+  <text x="400" y="395" font-family="system-ui, sans-serif" font-size="16" fill="white" fill-opacity="0.7" text-anchor="middle">3–5 червня 2026 · Виставковий центр</text>
+</svg>

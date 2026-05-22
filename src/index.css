@@ -1,48 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 37% 10%;
+    --background: 42 33% 96%;
+    --foreground: 212 34% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 37% 10%;
+    --card-foreground: 212 34% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 37% 10%;
+    --popover-foreground: 212 34% 14%;
 
-    --primary: 215 100% 45%;
-    --primary-foreground: 210 40% 99%;
+    --primary: 184 70% 32%;
+    --primary-foreground: 42 33% 98%;
 
-    --secondary: 214 46% 95%;
-    --secondary-foreground: 222 37% 14%;
+    --secondary: 40 55% 92%;
+    --secondary-foreground: 212 34% 18%;
 
-    --muted: 214 32% 93%;
-    --muted-foreground: 217 18% 37%;
+    --muted: 188 18% 92%;
+    --muted-foreground: 212 16% 39%;
 
-    --accent: 212 100% 97%;
-    --accent-foreground: 222 37% 14%;
+    --accent: 186 32% 91%;
+    --accent-foreground: 212 34% 18%;
 
     --destructive: 0 78% 56%;
     --destructive-foreground: 210 40% 99%;
 
-    --border: 214 24% 88%;
-    --input: 214 24% 88%;
-    --ring: 215 100% 45%;
+    --border: 188 18% 82%;
+    --input: 188 18% 82%;
+    --ring: 184 70% 32%;
 
-    --radius: 0.75rem;
+    --radius: 1.25rem;
 
-    --surface: 210 50% 99%;
-    --surface-foreground: 222 37% 10%;
+    --surface: 42 45% 98%;
+    --surface-foreground: 212 34% 14%;
     --panel: 0 0% 100%;
-    --panel-foreground: 222 37% 10%;
-    --line: 214 26% 84%;
-    --brand-soft: 214 100% 95%;
-    --brand-strong: 218 100% 38%;
-    --hero-glow: 215 100% 45%;
-    --shadow-soft: 215 65% 35%;
+    --panel-foreground: 212 34% 14%;
+    --line: 188 18% 80%;
+    --brand-soft: 184 44% 90%;
+    --brand-strong: 184 70% 28%;
+    --hero-glow: 184 70% 36%;
+    --hero-warm: 29 88% 60%;
+    --shadow-soft: 185 50% 24%;
 
     --sidebar-background: 215 28% 10%;
     --sidebar-foreground: 210 40% 98%;
@@ -110,7 +113,8 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    scrollbar-gutter: stable;
   }
 
   body {
@@ -118,17 +122,27 @@
     background-image:
       radial-gradient(circle at top left, hsl(var(--hero-glow) / 0.18), transparent 28%),
       linear-gradient(180deg, hsl(var(--surface)), hsl(var(--background)) 42%);
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   }
 
   #root {
     @apply min-h-screen;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .display-heading {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.04em;
   }
 }
 
 @layer components {
   .page-shell {
     @apply relative min-h-screen overflow-hidden;
+    isolation: isolate;
   }
 
   .site-container {
@@ -140,27 +154,27 @@
   }
 
   .surface-panel {
-    @apply rounded-xl border bg-card text-card-foreground shadow-soft;
+    @apply rounded-[1.75rem] border bg-card text-card-foreground shadow-soft;
   }
 
   .surface-panel-hover {
-    @apply surface-panel transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift;
+    @apply surface-panel transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lift;
   }
 
   .section-heading {
-    @apply text-2xl font-semibold tracking-normal md:text-3xl;
+    @apply text-3xl font-semibold tracking-normal md:text-4xl;
   }
 
   .section-copy {
-    @apply max-w-2xl text-sm leading-6 text-muted-foreground md:text-base;
+    @apply max-w-2xl text-sm leading-7 text-muted-foreground md:text-base;
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-primary;
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-primary;
   }
 
   .filter-chip {
-    @apply inline-flex items-center rounded-full border border-line bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground;
+    @apply inline-flex items-center rounded-full border border-line/80 bg-secondary/75 px-3 py-1 text-xs font-medium text-secondary-foreground;
   }
 
   .stat-card {
@@ -169,28 +183,32 @@
 
   .hero-grid {
     background-image:
-      linear-gradient(hsl(var(--line) / 0.38) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--line) / 0.38) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(hsl(var(--line) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--line) / 0.4) 1px, transparent 1px);
+    background-size: 44px 44px;
   }
 
   .mesh-glow {
     position: absolute;
-    inset: auto -12% 12% auto;
-    width: min(32rem, 48vw);
+    inset: auto -8% 8% auto;
+    width: min(36rem, 48vw);
     aspect-ratio: 1;
     border-radius: 9999px;
-    background: radial-gradient(circle, hsl(var(--hero-glow) / 0.2), transparent 70%);
-    filter: blur(14px);
+    background:
+      radial-gradient(circle at 30% 30%, hsl(var(--hero-glow) / 0.26), transparent 42%),
+      radial-gradient(circle at 70% 40%, hsl(var(--hero-warm) / 0.22), transparent 34%),
+      radial-gradient(circle, hsl(var(--hero-glow) / 0.12), transparent 70%);
+    display: none;
     pointer-events: none;
+    z-index: -1;
   }
 
   .topbar-blur {
-    @apply border-b border-line/80 bg-background/85 backdrop-blur-xl;
+    @apply border-b border-line/70 bg-background/95;
   }
 
   .nav-link {
-    @apply rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground;
+    @apply rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-all hover:bg-accent/90 hover:text-accent-foreground;
   }
 
   .nav-link-active {
@@ -198,7 +216,7 @@
   }
 
   .mini-metric {
-    @apply rounded-lg border border-line bg-secondary/70 px-4 py-3;
+    @apply rounded-2xl border border-line/80 bg-secondary/60 px-4 py-3;
   }
 
   .catalog-grid {
@@ -220,11 +238,99 @@
   .chart-bar > span {
     @apply block h-full rounded-full bg-primary;
   }
+
+  .display-card {
+    @apply relative overflow-hidden rounded-[2rem] shadow-soft;
+    border: 1px solid hsl(0 0% 100% / 0.55);
+    background-color: hsl(0 0% 100% / 0.82);
+  }
+
+  .display-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, hsl(var(--hero-glow) / 0.12), transparent 28%),
+      radial-gradient(circle at top right, hsl(var(--hero-warm) / 0.18), transparent 24%);
+    pointer-events: none;
+  }
+
+  .status-pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-primary;
+  }
+
+
+  [class*="backdrop-blur"] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .topbar-blur,
+  .surface-panel,
+  .mini-metric,
+  .filter-chip,
+  .display-card,
+  .glass-strip,
+  .hero-stat {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .dashboard-window {
+    @apply display-card p-5 md:p-6;
+  }
+
+  .dashboard-dot {
+    @apply h-2.5 w-2.5 rounded-full;
+  }
+
+  .glass-strip {
+    @apply rounded-[1.5rem] p-4 shadow-soft;
+    border: 1px solid hsl(0 0% 100% / 0.55);
+    background-color: hsl(0 0% 100% / 0.65);
+  }
+
+  .spotlight-card {
+    @apply relative overflow-hidden rounded-[1.75rem] border border-primary/15 bg-gradient-to-br from-primary/10 via-white to-secondary/70 p-6 shadow-soft;
+  }
+
+  .spotlight-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -2rem -2rem auto;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle, hsl(var(--hero-warm) / 0.24), transparent 68%);
+    pointer-events: none;
+  }
+
+  .hero-stat {
+    @apply rounded-[1.4rem] p-4 shadow-soft;
+    border: 1px solid hsl(0 0% 100% / 0.55);
+    background-color: hsl(0 0% 100% / 0.78);
+  }
+
+  .section-frame {
+    @apply display-card p-6 md:p-8;
+  }
+
+  .soft-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-border to-transparent;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .bg-noise {
+    background-image:
+      radial-gradient(hsl(var(--foreground) / 0.05) 0.8px, transparent 0.8px),
+      radial-gradient(hsl(var(--foreground) / 0.03) 0.6px, transparent 0.6px);
+    background-position: 0 0, 18px 18px;
+    background-size: 24px 24px, 24px 24px;
   }
 }
 

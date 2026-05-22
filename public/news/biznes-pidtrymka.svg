@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#065f46;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <circle cx="680" cy="80" r="130" fill="white" fill-opacity="0.07"/>
+  <circle cx="80" cy="340" r="90" fill="white" fill-opacity="0.05"/>
+  <!-- coin stack -->
+  <ellipse cx="580" cy="300" rx="70" ry="20" fill="white" fill-opacity="0.18"/>
+  <rect x="510" y="240" width="140" height="60" fill="white" fill-opacity="0.14"/>
+  <ellipse cx="580" cy="240" rx="70" ry="20" fill="white" fill-opacity="0.22"/>
+  <rect x="520" y="190" width="120" height="50" fill="white" fill-opacity="0.12"/>
+  <ellipse cx="580" cy="190" rx="60" ry="18" fill="white" fill-opacity="0.2"/>
+  <!-- handshake icon simplified -->
+  <path d="M160 250 Q200 210 260 240 Q300 260 340 230 Q380 200 420 230" stroke="white" stroke-width="8" fill="none" stroke-opacity="0.5" stroke-linecap="round"/>
+  <circle cx="160" cy="250" r="18" fill="white" fill-opacity="0.2"/>
+  <circle cx="420" cy="230" r="18" fill="white" fill-opacity="0.2"/>
+  <!-- growth arrow -->
+  <polyline points="140,330 220,280 300,300 400,240 500,200" stroke="white" stroke-width="5" fill="none" stroke-opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="490,188 520,196 502,218" fill="white" fill-opacity="0.35"/>
+  <!-- text -->
+  <text x="400" y="70" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="white" text-anchor="middle">Підтримка бізнесу</text>
+  <text x="400" y="106" font-family="system-ui, sans-serif" font-size="20" fill="white" fill-opacity="0.85" text-anchor="middle">від Сумської обласної ради</text>
+  <rect x="260" y="120" width="280" height="3" rx="2" fill="white" fill-opacity="0.4"/>
+  <text x="400" y="395" font-family="system-ui, sans-serif" font-size="16" fill="white" fill-opacity="0.7" text-anchor="middle">Гранти · Кредити · Консультації · 2026</text>
+</svg>
